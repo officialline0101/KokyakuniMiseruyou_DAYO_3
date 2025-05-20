@@ -91,7 +91,7 @@
         }
 
         h1 {
-            background: linear-gradient(135deg, #7e6c86, #56455e);
+            background: linear-gradient(135deg, #7e6c86, #4a3852);
             color: white;
             padding: 20px;
             border-radius: 0 15px 0px 45px;
@@ -288,21 +288,32 @@
         }
 
         .week-button-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            margin-bottom: 10px;
-        }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
 
-        .week-button {
-            padding: 10px 20px;
-            background-color: #444444;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+.week-button {
+    padding: 10px 20px;
+    background-color: #444444;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    transform-origin: center center;
+}
+
+.week-button:hover {
+    background-color: #583962;
+    transform: scale(1.15); /* ドーン！ってくらい拡大🔥 */
+}
+
+.week-button:active {
+    transform: scale(0.95); /* クリックした瞬間にギュッと縮む💥 */
+}
 
         .month-button-container {
             display: flex;
@@ -320,6 +331,15 @@
             border-radius: 4px;
             cursor: pointer;
         }
+
+        .month-button:hover {
+    background-color: #583962;
+    transform: scale(1.15); /* ドーン！ってくらい拡大🔥 */
+}
+
+.month-button:active {
+    transform: scale(0.95); /* クリックした瞬間にギュッと縮む💥 */
+}
 
         .current-month {
             font-size: 16px;
@@ -580,7 +600,7 @@
         }
 
         button:hover {
-            background-color: #444;
+            background-color: #e9e9e9;
             transform: scale(1.05);
         }
 
@@ -718,8 +738,9 @@
         <div class="label" id="course">メニューをお選びください<span class="required">必須</span></div>
         <div class="info-text">※メニューを選択すると<br>空き状況のカレンダーが表示されます</div>
         <div class="menu-sections">
-            <button type="button" onclick="showMenu('male')">ジェル</button>
+            <button type="button" onclick="showMenu('male')">ハンド</button>
             <button type="button" onclick="showMenu('female')">フット</button>
+            <button type="button" onclick="showMenu('handfemale')">ハンド＆フット＆オフ</button>
             <button type="button" onclick="showMenu('whitening')">オフのみ</button>
             <button type="button" onclick="showMenu('sonota')">その他メニュー</button>
         </div>
@@ -728,38 +749,39 @@
 
         <div id="male" class="menu-section">
             <div class="highlight-background">
-                <span class="highlight-text">◆ジェル◆</span>
+                <span class="highlight-text">◆ハンド◆</span>
             </div>
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this, 'treatment1')" data-price="15000">《ハンド》ワンカラー　ケア込♪</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment2')" data-price="15000">《ハンド》ラメグラデーション　ケア込♪</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment3')" data-price="15000">《ハンド》カラーグラデーション/フレンチ　ケア込♪</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment4')" data-price="15000">《ハンド》ベースカラー＆フレンチ/カラグラ　ケア込♪</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment1')" data-price="15000">《ハンド》ベースカラー＆フレンチ/カラグラ　ケア込♪</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment2')" data-price="15000">《ハンド》アート4本～10本コース　ケア込♪</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment3')" data-price="15000">《ハンド》つけ放題コース　ケア込♪</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment4')" data-price="15000">メンテナンス</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment1')" data-category="hand" data-price="15000">《ハンド》ワンカラー　ケア込♪</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment2')" data-category="hand" data-price="15000">《ハンド》ラメグラデーション　ケア込♪</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment3')" data-category="hand" data-price="15000">《ハンド》カラーグラデーション/フレンチ　ケア込♪</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment4')" data-category="hand" data-price="15000">《ハンド》ベースカラー＆フレンチ/カラグラ　ケア込♪</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment4')" data-category="hand" data-price="15000">《ハンド》アート2本～6本コース　ケア込♪</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment4')" data-category="hand" data-price="15000">《ハンド》アート4本～10本コース　ケア込♪</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment4')" data-category="hand" data-price="15000">《ハンド》つけ放題コース　ケア込♪</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment4')" data-category="hand" data-price="15000">メンテナンス</button>
             </div>
             <div class="highlight-background">
                 <span class="highlight-text">オプション</span>
             </div>
             <div class="irradiations">
                 <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">《オプション》個性派アート</button>
-                <button type="button" id="repeatirradiations" onclick="selectirradiations(this)" data-price="15000">《オプション》ストーン10粒</button>
-                <button type="button" id="sanirradiations" onclick="selectirradiations(this)" data-price="15000">《オプション》ラメ/ライナーライン</button>
-                <button type="button" id="repeatirradiations" onclick="selectirradiations(this)" data-price="15000">《オプション》アート1本～2本</button>
-                <button type="button" id="sanirradiations" onclick="selectirradiations(this)" data-price="15000">《新規様用》他店ジェルオフ</button>
-                <button type="button" id="repeatirradiations" onclick="selectirradiations(this)" data-price="15000">《再来様用》当店ジェルオフ</button>
-                <button type="button" id="sanirradiations" onclick="selectirradiations(this)" data-price="15000">《再来様用》他店ジェルオフ</button>
-                <button type="button" id="repeatirradiations" onclick="selectirradiations(this)" data-price="15000">長さだし10本</button>
-                <button type="button" id="sanirradiations" onclick="selectirradiations(this)" data-price="15000">長さだし1本</button>
-                <button type="button" id="repeatirradiations" onclick="selectirradiations(this)" data-price="15000">長さだし２本</button>
-                <button type="button" id="sanirradiations" onclick="selectirradiations(this)" data-price="15000">長さだし３本</button>
-                <button type="button" id="repeatirradiations" onclick="selectirradiations(this)" data-price="15000">長さだし４本</button>
-                <button type="button" id="sanirradiations" onclick="selectirradiations(this)" data-price="15000">長さだし５本</button>
-                <button type="button" id="sanirradiations" onclick="selectirradiations(this)" data-price="15000">長さだし６本</button>
-                <button type="button" id="sanirradiations" onclick="selectirradiations(this)" data-price="15000">長さだし７本</button>
-                <button type="button" id="sanirradiations" onclick="selectirradiations(this)" data-price="15000">長さだし８本</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">《オプション》ストーン10粒</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">《オプション》ラメ/ライナーライン</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">《オプション》アート1本～2本</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">《新規様用》他店ジェルオフ</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">《再来様用》当店ジェルオフ</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">《再来様用》他店ジェルオフ</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">長さだし1本</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">長さだし2本</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">長さだし3本</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">長さだし4本</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">長さだし5本</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">長さだし6本</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">長さだし7本</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">長さだし8本</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">長さだし9本</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">長さだし10本</button>
             </div>
         </div>
 
@@ -768,11 +790,11 @@
                 <span class="highlight-text">◆フット◆</span>
             </div>
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this, 'treatment5')" data-price="15000">《フット》ワンカラー　ケア込♪</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment6')" data-price="15000">《フット》ラメグラデーション　ケア込♪</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment7')" data-price="15000">《フット》アート2本～6本コース　ケア込♪</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment5')" data-price="15000">《フット》アート4本～10本コース　ケア込♪</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment6')" data-price="15000">フットケア（パラフィンパック込）</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment5')" data-category="foot" data-price="15000">《フット》ワンカラー　ケア込♪</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment6')" data-category="foot" data-price="15000">《フット》ラメグラデーション　ケア込♪</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment7')" data-category="foot" data-price="15000">《フット》アート2本～6本コース　ケア込♪</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment6')" data-category="foot" data-price="15000">《フット》アート4本～10本コース　ケア込♪</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment7')" data-category="foot" data-price="15000">フットケア（パラフィンパック込）</button>
             </div>
             <div class="highlight-background">
                 <span class="highlight-text">オプション</span>
@@ -781,7 +803,7 @@
                 <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">《オプション》個性派アート</button>
                 <button type="button" id="repeatirradiations" onclick="selectirradiations(this)" data-price="15000">《オプション》ストーン10粒</button>
                 <button type="button" id="sanirradiations" onclick="selectirradiations(this)" data-price="15000">《オプション》ラメ/ライナーライン</button>
-                <button type="button" id="yonirradiations" onclick="selectirradiations(this)" data-price="15000">《オプション》アート1本～2本〈30分〉</button>
+                <button type="button" id="yonirradiations" onclick="selectirradiations(this)" data-price="15000">《オプション》アート1本～2本</button>
                 <button type="button" id="goirradiations" onclick="selectirradiations(this)" data-price="15000">《新規様用》他店ジェルオフ</button>
                 <button type="button" id="rokuirradiations" onclick="selectirradiations(this)" data-price="15000">《再来様用》当店ジェルオフ</button>
                 <button type="button" id="sitiirradiations" onclick="selectirradiations(this)" data-price="15000">《再来様用》他店ジェルオフ</button>
@@ -793,20 +815,78 @@
                 <span class="highlight-text">◆オフのみ◆</span>
             </div>
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this, 'treatment8')" data-price="15000">《オフのみ》新規様用ジェルオフのみ</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment9')" data-price="15000">《オフのみ》当店ジェルオフのみ</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment9')" data-price="15000">《オフのみ》他店ジェルオフのみ</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment8')" data-category="off" data-price="15000">《オフのみ》新規様用ジェルオフのみ</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment9')" data-category="off" data-price="15000">《オフのみ》当店ジェルオフのみ</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment9')" data-category="off" data-price="15000">《オフのみ》他店ジェルオフのみ</button>
+            </div>
+        </div>
+
+        <div id="handfemale" class="menu-section">
+            <div class="highlight-background">
+                <span class="highlight-text">◆ハンド◆</span>
+            </div>
+            <div class="symptoms">
+                <button type="button" onclick="selectSymptom(this, 'treatment1')" data-category="hand" data-price="15000">《ハンド》ワンカラー　ケア込♪</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment2')" data-category="hand" data-price="15000">《ハンド》ラメグラデーション　ケア込♪</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment3')" data-category="hand" data-price="15000">《ハンド》カラーグラデーション/フレンチ　ケア込♪</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment4')" data-category="hand" data-price="15000">《ハンド》ベースカラー＆フレンチ/カラグラ　ケア込♪</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment4')" data-category="hand" data-price="15000">《ハンド》アート2本～6本コース　ケア込♪</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment4')" data-category="hand" data-price="15000">《ハンド》アート4本～10本コース　ケア込♪</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment4')" data-category="hand" data-price="15000">《ハンド》つけ放題コース　ケア込♪</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment4')" data-category="hand" data-price="15000">メンテナンス</button>
+            </div>
+            <div class="highlight-background">
+                <span class="highlight-text">◆フット◆</span>
+            </div>
+            <div class="symptoms">
+                <button type="button" onclick="selectSymptom(this, 'treatment5')" data-category="foot" data-price="15000">《フット》ワンカラー　ケア込♪</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment6')" data-category="foot" data-price="15000">《フット》ラメグラデーション　ケア込♪</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment7')" data-category="foot" data-price="15000">《フット》アート2本～6本コース　ケア込♪</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment6')" data-category="foot" data-price="15000">《フット》アート4本～10本コース　ケア込♪</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment7')" data-category="foot" data-price="15000">フットケア（パラフィンパック込）</button>
+            </div>
+            <div class="highlight-background">
+                <span class="highlight-text">◆オフのみ◆</span>
+            </div>
+            <div class="symptoms">
+                <button type="button" onclick="selectSymptom(this, 'treatment8')" data-category="off" data-price="15000">《オフのみ》新規様用ジェルオフのみ</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment9')" data-category="off" data-price="15000">《オフのみ》当店ジェルオフのみ</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment9')" data-category="off" data-price="15000">《オフのみ》他店ジェルオフのみ</button>
+            </div>
+            <div class="highlight-background">
+                <span class="highlight-text">オプション</span>
+            </div>
+            <div class="irradiations">
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">《オプション》個性派アート</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">《オプション》ストーン10粒</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">《オプション》ラメ/ライナーライン</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">《オプション》アート1本～2本</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">《新規様用》他店ジェルオフ</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">《再来様用》【ハンド】当店ジェルオフ</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">《再来様用》【ハンド】他店ジェルオフ</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">《再来様用》【フット】当店ジェルオフ</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">《再来様用》【フット】他店ジェルオフ</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">長さだし1本</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">長さだし2本</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">長さだし3本</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">長さだし4本</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">長さだし5本</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">長さだし6本</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">長さだし7本</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">長さだし8本</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">長さだし9本</button>
+                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">長さだし10本</button>
             </div>
         </div>
 
         <div id="sonota" class="menu-section">
             <div class="highlight-background">
-                <span class="highlight-text">◆マッサージコース◆</span>
+                <span class="highlight-text">◆その他メニュー◆</span>
             </div>
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this, 'treatment8')" data-price="15000">パラフィンパック（ハンド）</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment9')" data-price="15000">ネイルケア（ハンド、ドライケア）</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment9')" data-price="15000">パラフィンパック(フット)</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment8')" data-category="sonota" data-price="15000">パラフィンパック（ハンド）</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment9')" data-category="sonota" data-price="15000">ネイルケア（ハンド、ドライケア）</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment9')" data-category="sonota" data-price="15000">パラフィンパック(フット)</button>
             </div>
         </div>
 
@@ -878,7 +958,7 @@
 
         document.addEventListener('DOMContentLoaded', function () {
             liff.init({
-                liffId: '2005254357-zKma9BZk'
+                liffId: '2007233524-p7d3Oa3V'
             }).then(() => {
                 console.log('LIFF初期化成功');
             }).catch((err) => {
@@ -890,7 +970,7 @@
 
         // 訪問回数ごとの時間設定 (例：初めて=20分、2回目以降=15分)
         let visitTimes = {
-            '1回目': 30,
+            '1回目': 0,
             '2回目以降': 0
         };
 
@@ -905,15 +985,16 @@
             '《新規様用》他店ジェルオフ': 30,
             '《再来様用》当店ジェルオフ': 30,
             '《再来様用》他店ジェルオフ': 30,
-            '長さだし10本': 60,
             '長さだし1本': 15,
-            '長さだし２本': 20,
-            '長さだし３本': 30,
-            '長さだし４本': 35,
-            '長さだし５本': 40,
-            '長さだし６本': 45,
-            '長さだし７本': 50,
-            '長さだし８本': 55
+            '長さだし2本': 20,
+            '長さだし3本': 25,
+            '長さだし4本': 30,
+            '長さだし5本': 35,
+            '長さだし6本': 40,
+            '長さだし7本': 45,
+            '長さだし8本': 50,
+            '長さだし9本': 55,
+            '長さだし10本': 60
         };
 
         let selectedirradiationsTime = 0; // 訪問回数で選択された時間
@@ -923,10 +1004,11 @@
             '《ハンド》ラメグラデーション　ケア込♪': 60,
             '《ハンド》カラーグラデーション/フレンチ　ケア込♪': 75,
             '《ハンド》ベースカラー＆フレンチ/カラグラ　ケア込♪': 90,
-            '《ハンド》ベースカラー＆フレンチ/カラグラ　ケア込♪': 80,
+            '《ハンド》アート2本～6本コース　ケア込♪': 80,
             '《ハンド》アート4本～10本コース　ケア込♪': 115,
             '《ハンド》つけ放題コース　ケア込♪': 120,
             'メンテナンス': 90,
+            'ハンド＆フット': 120,
             '《フット》ワンカラー　ケア込♪': 60,
             '《フット》ラメグラデーション　ケア込♪': 60,
             '《フット》アート2本～6本コース　ケア込♪': 80,
@@ -979,7 +1061,7 @@
             const selectedMenuText = selectedMenu ? `<span style="color:#13ca5e;"><strong>【コース】</strong></span><br>・${selectedMenu}` : '・コースが未選択です';
 
             const selectedSymptomText = selectedSymptom.length > 0
-                ? `<span style="color:#13ca5e;"><strong>【メニュー】</strong></span><br>・${selectedSymptom.join('<br>・')}`
+                ? `<span style="color:#13ca5e;"><strong>【メニュー】</strong></span><br>・${selectedSymptom.join('<br>')}`
                 : '・メニューが未選択です';
 
             const irradiationsText = irradiationsCount
@@ -1084,14 +1166,21 @@
         });
 
         function selectSymptom(button, treatmentId) {
-            // 選択された日時をリセット
-            selectedFullDate = '';
+    selectedFullDate = '';
 
-            // ボタンの選択状態を切り替える
-            button.classList.toggle('active');
+    const category = button.getAttribute('data-category');
 
-            // 選択されたオプションを取得
-            const updatedSelectedButtons = document.querySelectorAll('.symptoms button.active');
+    // 同じカテゴリのボタンの active を解除
+    const allButtons = document.querySelectorAll(`button[data-category="${category}"]`);
+    allButtons.forEach(btn => btn.classList.remove('active'));
+
+    // 新しく選択
+    button.classList.add('active');
+
+            // 現在選択されているボタンを取得（もう一度更新）
+            let updatedSelectedButtons = document.querySelectorAll('.symptoms button.active');
+            const selectedMenuNameDiv = document.getElementById('selected-menu-name');
+
             // メニュー時間と価格をリセット
             selectedMenuTime = 0;
             selectedSymptom = [];
@@ -1100,15 +1189,15 @@
             if (updatedSelectedButtons.length === 0) {
                 // すべてのボタンの選択が解除された場合
                 selectedMenuTime = 0;
-                selectedSymptom = null; // 選択されたメニューをリセット
-                menuPrice = 0; // メニュー価格をリセット
+                selectedSymptom = null;
+                menuPrice = 0;
             } else {
                 // 選択された各ボタンについて処理
                 updatedSelectedButtons.forEach((btn) => {
                     const selectedMenu = btn.textContent;
-                    selectedMenuTime += menuTimes[selectedMenu] || 0; // 各メニューの時間を合計
-                    selectedSymptom.push(selectedMenu); // 選択されたメニューを配列に追加
-                    menuPrice += parseInt(btn.getAttribute('data-price'), 10) || 0; // 各メニューの価格を合計
+                    selectedMenuTime += menuTimes[selectedMenu] || 0;
+                    selectedSymptom.push(selectedMenu);
+                    menuPrice += parseInt(btn.getAttribute('data-price'), 10) || 0;
                 });
             }
 
@@ -1232,7 +1321,6 @@
             // 選択されたメニューセクションを表示
             document.querySelectorAll('.menu-section').forEach(section => {
                 section.classList.remove('active');
-                section.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
             });
 
             // 対応するメニューボタンを選択状態にする
@@ -1350,7 +1438,7 @@
                 return;
             }
 
-            const url = 'https://script.google.com/macros/s/AKfycbwCxnJaxGZ46c3TnnesuZcD_zuxuVoSHoDHo5MxkRzChcK5vZDwBs4HstzkXO-KLyuDYA/exec' +
+            const url = 'https://script.google.com/macros/s/AKfycbwFANnPxdIRMQl7d_w1AUIW3uy06Fl2vYZKdq4bJEk9M5POCwkGJ1XbeGeaDScP0AB6/exec' +
                 `?startTime=${startTime.toISOString()}&endTime=${endTime.toISOString()}`;
 
             try {
@@ -1421,13 +1509,15 @@
             }
 
 
-            // 現在の日時を取得
-            const now = new Date();
+// 現在の日時を取得
+const now = new Date();
+const maxDate = new Date();
+maxDate.setDate(now.getDate() + 91);
 
-            // テーブルの内容を更新
-            for (let i = 0; i < 7; i++) {
-                const day = new Date(currentDate);
-                day.setDate(day.getDate() + i);
+// テーブルの内容を更新
+for (let i = 0; i < 7; i++) {
+    const day = new Date(currentDate);
+    day.setDate(day.getDate() + i);
 
                 let businessEventTimes = []; // 営業日のイベント時間帯を記録する配列
 
@@ -1458,8 +1548,26 @@
                     // メニュー時間と訪問回数の時間を合計して、終了時間を設定
                     slotEnd.setMinutes(slotStart.getMinutes() + menuDuration + visitDuration + irradiationsDuration);
 
+        // ✅ 90日後以降は✕
+        if (slotStart > maxDate) {
+            cell.textContent = '✕';
+            cell.classList.add('unavailable');
+            continue;
+        }
+
                     // 終了時間が翌日 (0時以降) になる場合は✕に設定
                     if (slotEnd.getDate() !== slotStart.getDate()) {
+                        cell.textContent = '✕';
+                        cell.classList.add('unavailable');
+                        continue;
+                    }
+
+                    // 18時以降に終了する予約を不可にする (17:30は可)
+                    if (slotEnd.getHours() === 21 && slotEnd.getMinutes() > 0) {
+                        cell.textContent = '✕';
+                        cell.classList.add('unavailable');
+                        continue;
+                    } else if (slotEnd.getHours() > 21) {
                         cell.textContent = '✕';
                         cell.classList.add('unavailable');
                         continue;
