@@ -821,7 +821,6 @@
         </div>
 
         <div class="label" id="course">メニューをお選びください</div>
-        <div class="info-text">8/5から料金かわります。詳細はプロフィール欄</div>
         <div class="menu-sections">
             <button type="button" onclick="showMenu('male')">1名様</button>
             <button type="button" onclick="showMenu('female')">2名様</button>
@@ -1266,35 +1265,35 @@
             const treatmentText = document.getElementById('treatment-text');
 
             if (treatmentId === 'treatment1') {
-                treatmentText.innerHTML = `<div style="text-align: left;">1名様：10分鑑定</div><div style="text-align: right;"><strong>料金：1,500円</strong></div>`;
+                treatmentText.innerHTML = `<div style="text-align: left;">1名様：10分鑑定</div><div style="text-align: right;"><strong><span style="color:#ff0000;">料金：1,500円</span></strong></div>`;
             } else if (treatmentId === 'treatment2') {
-                treatmentText.innerHTML = `<div style="text-align: left;">1名様：20分鑑定</div><div style="text-align: right;"><strong>料金：2,500円</strong></div>`;
+                treatmentText.innerHTML = `<div style="text-align: left;">1名様：20分鑑定</div><div style="text-align: right;"><strong><span style="color:#ff0000;">料金：3,000円</span></strong></div>`;
             } else if (treatmentId === 'treatment3') {
-                treatmentText.innerHTML = `<div style="text-align: left;">1名様：30分鑑定</div><div style="text-align: right;"><strong>料金：3,500円</strong></div>`;
+                treatmentText.innerHTML = `<div style="text-align: left;">1名様：30分鑑定</div><div style="text-align: right;"><strong><span style="color:#ff0000;">料金：4,500円</span></strong></div>`;
             } else if (treatmentId === 'treatment4') {
-                treatmentText.innerHTML = `<div style="text-align: left;">1名様：40分鑑定</div><div style="text-align: right;"><strong>料金：4,500円</strong></div>`;
+                treatmentText.innerHTML = `<div style="text-align: left;">1名様：40分鑑定</div><div style="text-align: right;"><strong><span style="color:#ff0000;">料金：6,000円</span></strong></div>`;
             } else if (treatmentId === 'treatment5') {
-                treatmentText.innerHTML = `<div style="text-align: left;">1名様：50分鑑定</div><div style="text-align: right;"><strong>料金：5,500円</strong></div>`;
+                treatmentText.innerHTML = `<div style="text-align: left;">1名様：50分鑑定</div><div style="text-align: right;"><strong><span style="color:#ff0000;">料金：7,500円</span></strong></div>`;
             } else if (treatmentId === 'treatment6') {
-                treatmentText.innerHTML = `<div style="text-align: left;">2名様：10分ずつ計20分鑑定</div><div style="text-align: right;"><strong>料金：3,000円</strong></div>`;
+                treatmentText.innerHTML = `<div style="text-align: left;">2名様：10分ずつ計20分鑑定</div><div style="text-align: right;"><strong><span style="color:#ff0000;">料金：3,000円</span></strong></div>`;
             } else if (treatmentId === 'treatment7') {
-                treatmentText.innerHTML = `<div style="text-align: left;">2名様：20分ずつ計40分鑑定</div><div style="text-align: right;"><strong>料金：5,000円</strong></div>`;
+                treatmentText.innerHTML = `<div style="text-align: left;">2名様：20分ずつ計40分鑑定</div><div style="text-align: right;"><strong><span style="color:#ff0000;">料金：6,000円</span></strong></div>`;
             } else if (treatmentId === 'treatment8') {
-                treatmentText.innerHTML = `<div style="text-align: left;">2名様：30分ずつ計60分鑑定</div><div style="text-align: right;"><strong>料金：7,000円</strong></div>`;
+                treatmentText.innerHTML = `<div style="text-align: left;">2名様：30分ずつ計60分鑑定</div><div style="text-align: right;"><strong><span style="color:#ff0000;">料金：9,000円</span></strong></div>`;
             } else if (treatmentId === 'treatment9') {
-                treatmentText.innerHTML = `<div style="text-align: left;">2名様：40分ずつ計80分鑑定</div><div style="text-align: right;"><strong>料金：9,000円</strong></div>`;
+                treatmentText.innerHTML = `<div style="text-align: left;">2名様：40分ずつ計80分鑑定</div><div style="text-align: right;"><strong><span style="color:#ff0000;">料金：12,000円</span></strong></div>`;
             } else if (treatmentId === 'treatment10') {
-                treatmentText.innerHTML = `<div style="text-align: left;">2名様：50分ずつ計100分鑑定</div><div style="text-align: right;"><strong>料金：11000円</strong></div>`;
+                treatmentText.innerHTML = `<div style="text-align: left;">2名様：50分ずつ計100分鑑定</div><div style="text-align: right;"><strong><span style="color:#ff0000;">料金：15,000円</span></strong></div>`;
             } else if (treatmentId === 'treatment11') {
-                treatmentText.innerHTML = `<div style="text-align: left;">3名様：10分ずつ計30分鑑定</div><div style="text-align: right;"><strong>料金：1500円ずつ計4500円</strong></div>`;
+                treatmentText.innerHTML = `<div style="text-align: left;">3名様：10分ずつ計30分鑑定</div><div style="text-align: right;"><strong><span style="color:#ff0000;">料金：4,500円</span></strong></div>`;
             } else if (treatmentId === 'treatment12') {
-                treatmentText.innerHTML = `<div style="text-align: left;">3名様：20分ずつ計60分鑑定</div><div style="text-align: right;"><strong>料金：2500円ずつ計7500円</strong></div>`;
+                treatmentText.innerHTML = `<div style="text-align: left;">3名様：20分ずつ計60分鑑定</div><div style="text-align: right;"><strong><span style="color:#ff0000;">料金：9,000円</span></strong></div>`;
             } else if (treatmentId === 'treatment13') {
-                treatmentText.innerHTML = `<div style="text-align: left;">3名様：30分ずつ計90分鑑定</div><div style="text-align: right;"><strong>料金：3500円ずつ計10500円</strong></div>`;
+                treatmentText.innerHTML = `<div style="text-align: left;">3名様：30分ずつ計90分鑑定</div><div style="text-align: right;"><strong><span style="color:#ff0000;">料金：13,500円</span></strong></div>`;
             } else if (treatmentId === 'treatment14') {
-                treatmentText.innerHTML = `<div style="text-align: left;">3名様：40分ずつ計120分鑑定</div><div style="text-align: right;"><strong>料金：4500円ずつ計13500円</strong></div>`;
+                treatmentText.innerHTML = `<div style="text-align: left;">3名様：40分ずつ計120分鑑定</div><div style="text-align: right;"><strong><span style="color:#ff0000;">料金：18,500円</span></strong></div>`;
             } else if (treatmentId === 'treatment15') {
-                treatmentText.innerHTML = `<div style="text-align: left;">3名様：50分ずつ計150分鑑定</div><div style="text-align: right;"><strong>料金：5500円ずつ計16500円</strong></div>`;
+                treatmentText.innerHTML = `<div style="text-align: left;">3名様：50分ずつ計150分鑑定</div><div style="text-align: right;"><strong><span style="color:#ff0000;">料金：22,500円</span></strong></div>`;
             } else if (treatmentId === 'treatment16') {
                 treatmentText.innerHTML = `<div style="text-align: left;">1名様：60分鑑定</div><div style="text-align: right;"><strong><span style="color:#ff0000;">料金：9,000円</span></strong></div>`;
             } else if (treatmentId === 'treatment17') {
@@ -1579,47 +1578,43 @@ if (menu === 'Kyousitu') {
             return `${date.getFullYear()}年${('0' + (date.getMonth() + 1)).slice(-2)}月${('0' + date.getDate()).slice(-2)}日`;
         }
 
-        async function fetchAvailability(date) {
-            const startTime = new Date(date);
-            const endTime = new Date(date);
-            endTime.setDate(endTime.getDate() + 7);
+async function fetchAvailability(date, force = false) {
+    const startTime = new Date(date);
+    const endTime = new Date(date);
+    endTime.setDate(endTime.getDate() + 7);
 
-            const cacheKey = startTime.toISOString() + endTime.toISOString();
+    const cacheKey = startTime.toISOString() + endTime.toISOString();
 
-            // キャッシュを確認
-            if (availabilityCache[cacheKey]) {
-                console.log('Using cached data');
-                updateCalendar(availabilityCache[cacheKey].availability, availabilityCache[cacheKey].businessDays);
-                return;
-            }
+    // 💡 キャッシュあり＆force指定なし → キャッシュ使用
+    if (availabilityCache[cacheKey] && !force) {
+        console.log('Using cached data');
+        updateCalendar(availabilityCache[cacheKey].availability, availabilityCache[cacheKey].businessDays);
+        return;
+    }
 
-            const url = 'https://script.google.com/macros/s/AKfycbzX7bSCnXa6Ce2wJ5mMYDW30_y5purOO_nMOL6B6ivCxqzMDLQOj3kRUBe7F3sycp0pSw/exec' +
-                `?startTime=${startTime.toISOString()}&endTime=${endTime.toISOString()}`;
+    const url = 'https://script.google.com/macros/s/AKfycbzX7bSCnXa6Ce2wJ5mMYDW30_y5purOO_nMOL6B6ivCxqzMDLQOj3kRUBe7F3sycp0pSw/exec' +
+        `?startTime=${startTime.toISOString()}&endTime=${endTime.toISOString()}`;
 
-            try {
-                showLoadingSpinner(); // Show loading spinner
-                const response = await fetch(url);
-                const data = await response.json();
-                console.log(data);
+    try {
+        showLoadingSpinner();
+        const response = await fetch(url);
+        const data = await response.json();
 
-                // 営業日の情報を抽出
-                const businessDays = data.filter(event => event.summary === "営業日").map(event => {
-                    return {
-                        start: new Date(event.startTime),
-                        end: new Date(event.endTime)
-                    };
-                });
+        const businessDays = data.filter(event => event.summary === "営業日").map(event => {
+            return {
+                start: new Date(event.startTime),
+                end: new Date(event.endTime)
+            };
+        });
 
-                // データをキャッシュに保存
-                availabilityCache[cacheKey] = { availability: data, businessDays: businessDays };
-
-                updateCalendar(data, businessDays);
-            } catch (error) {
-                console.error('Error fetching availability:', error);
-            } finally {
-                hideLoadingSpinner(); // Hide loading spinner
-            }
-        }
+        availabilityCache[cacheKey] = { availability: data, businessDays };
+        updateCalendar(data, businessDays);
+    } catch (error) {
+        console.error('Error fetching availability:', error);
+    } finally {
+        hideLoadingSpinner();
+    }
+}
 
         // 時間を正規化する関数（27時までを当日として扱う）
         function normalizeTime(date) {
@@ -1825,18 +1820,7 @@ if (menu === 'Kyousitu') {
                     cell.setAttribute('data-date', slotStart.toISOString());
                 }
             }
-
         }
-
-        // 🎀 ページ読み込み時に1回、以後は1分ごとに自動でfetchする魔法タイム✨
-window.onload = () => {
-    fetchAvailability(new Date()); // 初回読み込み
-
-    setInterval(() => {
-        console.log("⏰ 1分経ったので再読み込みするYO〜！");
-        fetchAvailability(new Date()); // ← 毎回「今の時刻」で読み込み💡
-    }, 30000); // 60ミリ秒 = 1分
-};
 
         function updateCalendarHeader(date) {
             const headerRow = document.getElementById('calendar-header');
