@@ -908,12 +908,6 @@
     <div class="container">
         <h1>トレーフルカイロプラクティック<br>予約フォーム
         </h1>
-        <!-- 追加するボタン -->
-        <div class="repeat-booking-wrapper">
-            <button type="button" id="repeatBookingButton" onclick="applyPreviousSelection()">
-                🔁 前回と同じメニューで予約する
-            </button>
-        </div>
 
         <div class="label">お客様名<span class="required">必須</span></div>
 
@@ -984,7 +978,7 @@
 
         document.addEventListener('DOMContentLoaded', function () {
             liff.init({
-                liffId: '2007397643-Mmm64enZ'
+                liffId: ''
             }).then(() => {
                 console.log('LIFF初期化成功');
             }).catch((err) => {
@@ -1167,32 +1161,32 @@
             document.getElementById('displayInfo').innerHTML = `
         <div class="info-row">
             <p><span style="color:#45c4b7;"><strong>【お名前】</strong></span><br>・${name}</p>
-            <button class="edit-button" onclick="scrollToElement('name')">修正する</button>
+            <button class="edit-button" onclick="scrollToElement('name')">修正</button>
         </div>
         <hr>
         <div class="info-row">
             <p>${visitCountText}</p>
-            <button class="edit-button" onclick="scrollToElement('firstVisit')">修正する</button>
+            <button class="edit-button" onclick="scrollToElement('firstVisit')">修正</button>
         </div>
         <hr>
         <div class="info-row">
             <p>${selectedSymptomText}</p>
-            <button class="edit-button" onclick="scrollToElement('beautifuleyebrows'); scrollToElement('shinyskin'); scrollToElement('Cosmetologyasawhole');">修正する</button>
+            <button class="edit-button" onclick="scrollToElement('beautifuleyebrows'); scrollToElement('shinyskin'); scrollToElement('Cosmetologyasawhole');">修正</button>
         </div>
         <hr>
         <div class="info-row">
             <p>${selectedDate1Text}</p>
-            <button class="edit-button" onclick="scrollToElement('date1')">修正する</button>
+            <button class="edit-button" onclick="scrollToElement('date1')">修正</button>
         </div>
         <hr>
         <div class="info-row">
             <p>${selectedDate2Text}</p>
-            <button class="edit-button" onclick="scrollToElement('date2')">修正する</button>
+            <button class="edit-button" onclick="scrollToElement('date2')">修正</button>
         </div>
         <hr>
         <div class="info-row">
             <p>${selectedDate3Text}</p>
-            <button class="edit-button" onclick="scrollToElement('date3')">修正する</button>
+            <button class="edit-button" onclick="scrollToElement('date3')">修正</button>
         </div>
         <hr>
     `;
@@ -1565,7 +1559,7 @@
             // LINEトークにメッセージを送信
             liff.sendMessages([{
                 type: 'text',
-                text: `【予約フォーム】\n《お名前》${formData.name}\n《電話番号》${formData.phone}\n《ご来店回数》${formData.visitCount}\n\n《コース》${formData.selectedMenu}\n《メニュー》\n・${formData.selectedSymptom}\n《オプション》\n・${formData.irradiationsCount}\n\n【希望日時】\n《第一希望日》\n${formatDate(formData.dates[0])}\n\n《第二希望日》\n${formatDate(formData.dates[1])}\n\n《第三希望日》\n${formatDate(formData.dates[2])}\n\n《メッセージ》\n${formData.message}`
+                text: `【予約フォーム】\n《お名前》${formData.name}\n《電話番号》${formData.phone}\n《ご来店回数》${formData.visitCount}\n\n《メニュー》\n・${formData.selectedSymptom}\n\n【希望日時】\n《第一希望日》\n${formatDate(formData.dates[0])}\n\n《第二希望日》\n${formatDate(formData.dates[1])}\n\n《第三希望日》\n${formatDate(formData.dates[2])}\n\n《メッセージ》\n${formData.message}`
             }]).then(() => {
                 /* メッセージ送信成功時の処理 */
                 alert('確認してご連絡差し上げます。');
