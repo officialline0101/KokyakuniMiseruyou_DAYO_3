@@ -135,6 +135,26 @@
             overflow: hidden;
         }
 
+.labelmenu {
+    display: block;
+    margin-bottom: 10px;
+    padding: 3px;
+    font-weight: 300;
+    background-color: #ffffff;
+    color: rgb(10, 10, 10);
+    border-radius: 6px;
+    font-size: 15px;
+    text-align: center;
+    /* 中央揃え */
+    text-indent: 0px;
+    /* テキストを右に20pxずらす */
+    position: relative;
+    overflow: hidden;
+
+    /* 追加：黒枠2px */
+    border: 1px solid #000000;
+}
+
         .labelContent {
             display: block;
             margin-top: 10px;
@@ -569,6 +589,13 @@
             /* オプションテキストの色 */
         }
 
+        .highlight-textmenu {
+            font-weight: bold;
+            display: inline-block;
+            color: #fff;
+            /* オプションテキストの色 */
+        }
+
         .info-row {
             display: flex;
             justify-content: space-between;
@@ -958,8 +985,9 @@
 
         <div id="rejuvenation" class="menu-section">
             <div class="highlight-background">
-                <span class="highlight-text">◆リジュケアエステ◆<br>▼メニューをお選びください▼</span>
+                <span class="highlight-text">◆リジュケアエステ◆</span>
             </div>
+                <span class="labelmenu">▼メニューをお選びください▼</span>
             <div class="symptoms">
                 <button type="button" onclick="selectSymptom(this, 'treatment20')" data-category="リジュケアエステ" data-price="15000">リジュケアエステ</button>
             </div>
@@ -967,8 +995,9 @@
 
         <div id="release" class="menu-section">
             <div class="highlight-background">
-                <span class="highlight-text">◆新感覚!!筋膜リリース◆<br>▼メニューをお選びください▼</span>
+                <span class="highlight-text">◆新感覚!!筋膜リリース◆</span>
             </div>
+                <span class="labelmenu">▼メニューをお選びください▼</span>
             <div class="symptoms">
                 <button type="button" onclick="selectSymptom(this, 'treatment1')" data-category="新感覚!!筋膜リリース" data-price="15000">全身筋膜リリース</button>
                 <button type="button" onclick="selectSymptom(this, 'treatment2')" data-category="新感覚!!筋膜リリース" data-price="15000">コリ集中コース</button>
@@ -979,8 +1008,9 @@
 
         <div id="removal" class="menu-section">
             <div class="highlight-background">
-                <span class="highlight-text">◆美肌脱毛◆<br>▼メニューをお選びください▼</span>
+                <span class="highlight-text">◆美肌脱毛◆</span>
             </div>
+                <span class="labelmenu">▼メニューをお選びください▼</span>
             <div class="symptoms">
                 <button type="button" onclick="selectSymptom(this, 'treatment5')" data-category="美肌脱毛" data-price="15000">全身脱毛+顔+VIO</button>
                 <button type="button" onclick="selectSymptom(this, 'treatment6')" data-category="美肌脱毛" data-price="13000">全身脱毛+顔またはVIO</button>
@@ -996,8 +1026,9 @@
 
         <div id="acupuncture" class="menu-section">
             <div class="highlight-background">
-                <span class="highlight-text">◆耳つぼジュエリー◆<br>▼メニューをお選びください▼</span>
+                <span class="highlight-text">◆耳つぼジュエリー◆</span>
             </div>
+                <span class="labelmenu">▼メニューをお選びください▼</span>
             <div class="symptoms">
                 <button type="button" onclick="selectSymptom(this, 'treatment14')" data-category="耳つぼジュエリー" data-price="15000">シンプルプラン</button>
                 <button type="button" onclick="selectSymptom(this, 'treatment15')" data-category="耳つぼジュエリー" data-price="15000">付け放題プラン</button>
@@ -1006,8 +1037,9 @@
 
         <div id="mugwort" class="menu-section">
             <div class="highlight-background">
-                <span class="highlight-text">◆よもぎ蒸し◆<br>▼メニューをお選びください▼</span>
+                <span class="highlight-text">◆よもぎ蒸し◆</span>
             </div>
+                <span class="labelmenu">▼メニューをお選びください▼</span>
             <div class="symptoms">
                 <button type="button" onclick="selectSymptom(this, 'treatment16')" data-category="よもぎ蒸し" data-price="15000">よもぎ・モリンガ蒸し</button>
             </div>
@@ -1015,8 +1047,9 @@
 
         <div id="herbs" class="menu-section">
             <div class="highlight-background">
-                <span class="highlight-text">◆ハーブピーリング◆<br>▼メニューをお選びください▼</span>
+                <span class="highlight-text">◆ハーブピーリング◆</span>
             </div>
+                <span class="labelmenu">▼メニューをお選びください▼</span>
             <div class="symptoms">
                 <button type="button" onclick="selectSymptom(this, 'treatment17')" data-category="ハーブピーリング" data-price="15000">小顔筋膜リリース×ハーブピーリング</button>
                 <button type="button" onclick="selectSymptom(this, 'treatment33')" data-category="ハーブピーリング" data-price="15000">ハーブピーリングのみ</button>
@@ -1025,8 +1058,9 @@
 
         <div id="facial" class="menu-section">
             <div class="highlight-background">
-                <span class="highlight-text">◆フェイシャルWAX◆<br>▼メニューをお選びください▼</span>
+                <span class="highlight-text">◆フェイシャルWAX◆</span>
             </div>
+                <span class="labelmenu">▼メニューをお選びください▼</span>
             <div class="symptoms">
                 <button type="button" onclick="selectSymptom(this, 'treatment19')" data-category="フェイシャルWAX" data-price="15000">フェイシャルWAX</button>
             </div>
